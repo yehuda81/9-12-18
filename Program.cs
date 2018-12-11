@@ -4,43 +4,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace practise1
+namespace practise2
 {
     class Program
     {
         static void Main(string[] args)
-
         {
-            int num1 = Convert.ToInt32(Console.ReadLine());
-            int num2 = Convert.ToInt32(Console.ReadLine());
+            int a = 3;
+            int b = 5;
+            fnc(ref a,ref b);
 
-            bool module = printmodule(num1, num2);
-            {
-                if (module)
-                {
-                    Console.WriteLine("no module");
-                }
-                else
-                {
-                    Console.WriteLine("some module");
-                }
-                
-            }
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+            
+
         }
 
-        private static bool printmodule(int a, int b)
+        private static int [] fnc(ref int a,ref int b)
         {
-            if (a % b == 0)
-            {
-                return true;
-            }
-            {
-                return false;
-            }
-            
-            
-                
-            
+            a = a + 1;
+            b = b * 2;
+            int[] arr = { a, b };
+
+            return arr;
+
         }
+         
+
+         
     }
 }
