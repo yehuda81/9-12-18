@@ -4,33 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace practise2
+namespace practise5
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int a = 3;
-            int b = 5;
-            fnc(ref a,ref b);
-
-            Console.WriteLine(a);
-            Console.WriteLine(b);
-            
-
+            Console.WriteLine(sum(a:4,c:7));
         }
 
-        private static int [] fnc(ref int a,ref int b)
+        private static int sum(int a,int b = 1,int c = -1)
         {
-            a = a + 1;
-            b = b * 2;
-            int[] arr = { a, b };
-
-            return arr;
+            int mul = a * b * c;
+            return mul;
 
         }
-         
-
-         
     }
 }
